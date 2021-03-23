@@ -515,4 +515,5 @@ body {
 
 .article {
     line-height: 2rem;
+    text-align: justify;
 }
