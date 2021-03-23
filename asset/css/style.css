@@ -512,3 +512,7 @@ body {
 .topic_list {
     text-decoration: none;
 }
+
+.article {
+    line-height: 2rem;
+}
