@@ -518,3 +518,7 @@ body {
     line-height: 1.5rem;
     text-align: justify;
 }
+
+.dashbord {
+    width: 90%;
+}
