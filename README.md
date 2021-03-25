@@ -5,8 +5,8 @@ This is a repo that contains WordPress Tutorial for Teaching Purpose !!!
 * Introduction to Content Management System(CMS)
 * Wordpress Installation and Configuration
 * Working with Wordpress
-* Working with Theme Development
-* Working with Plugin Development
+* Theme Development
+* Plugin Development
 
 ###### The repo will be updated frequently
 
