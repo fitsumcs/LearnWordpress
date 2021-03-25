@@ -178,28 +178,39 @@
                             <p>
                                 Discussion Settings control how you manage user comments, filter spam comments, how you display the user’s avatars on your site, and how you handle incoming pingback/traceback from other blogs.
                             </p>
-                            <img class="dashbord gd" src="../asset/img/wordpress/DiscussionSettings.jpg" alt="">
+                            <img class="dashbord" src="../asset/img/wordpress/DiscussionSettings.jpg" alt="">
 
                             <h4 class="mt-3 text-info">Detail of Discussion Tab</h4>
                             <hr>
                             <p>
+                                <span class="font-weight-bold">Default Article Settings</span>
                                 <ul>
-                                    <li><span class="font-weight-bold">Site Title </span> It displays the name of the site in the template header.</li>
-                                    <li><span class="font-weight-bold">Tagline </span> This is a subheading for your site. Based on your theme, this may or may not show up on the front of your site</li>
-                                    <li><span class="font-weight-bold">WordPress Address (URL) </span> It is the URL of WordPress directory where your all core application files are present</li>
-                                    <li><span class="font-weight-bold">Site Address(URL) </span> This is the url of the site, it should only be different than the WP address if the directories are different, (generally this setting and the WordPress Address
-                                        are the same)</li>
-                                    <li><span class="font-weight-bold">Email Address </span> This is the default administrative email address and it will be used by the site to notify you of important things happening with the site, such as new user signups,
-                                        or password changes. This email is also used as a default by many plugins when an alternate email address is not available</li>
-                                    <li><span class="font-weight-bold">Membership </span> Checking this box allows visitors to register on your site. For instance, if you have content that you want users to sign up for, you’ll have to check this button to
-                                        allow registration access</li>
-                                    <li><span class="font-weight-bold">Default User Role </span> If membership is enabled, this is the user role that will be set for a new site member by defaults</li>
-                                    <li><span class="font-weight-bold">Timezone </span> Choose a city that is in your timezone to set WordPress time locally. If this is not set, the blog time will be based on the server WordPress is hosted on- For instance,
-                                        if your server is hosted in California, and you are in New York, any admin emails sent from WordPress will have California time, this could be very confusing</li>
-                                    <li><span class="font-weight-bold">Date Format </span>Sets the date format as you need to display on the site</li>
-                                    <li><span class="font-weight-bold">Week Starts On </span>Sets the week day which you prefer to start for WordPress calendar. By default it is set as Monday</li>
-                                    <li><span class="font-weight-bold">Site Language  </span>Sets the language for the WordPress dashboard</li>
+                                    <li><span class="font-weight-bold">Attempt to notify any blogs linked to from the article  </span> If you enable this checkbox, WordPress will send a ping to the site or article you have linked to in your post. If that
+                                        site allows pingbacks, then your mention of their site or article will show up in that site's comment section. This option triggers the notification at the time of publishing your article to the internet. If your
+                                        article contains many hyperlinks, then it will slow down the posting process as WordPress has to contact all of the sites before the post is published.</li>
+                                    <li><span class="font-weight-bold">Allow link notifications from other blogs (pingbacks and trackbacks) </span> This option enables your blog to accept pings from other sites which makes a reference your site or an article
+                                        on your site. If you check this box (enable), then any pingbacks and trackbacks that are received by your blog will appear in the comments section of your respective post.</li>
+                                    <li><span class="font-weight-bold">Allow people to post comments on new articles </span> By selecting the checkbox, you are telling your WordPress blog to allow comments on every new post. This option is also shown in the
+                                        individual post editor screen, where the checkbox for allowing comments will be automatically selected.</li>
+                                </ul>
 
+                                <span class="font-weight-bold">Other Comment Settings</span>
+                                <ul>
+                                    <li><span class="font-weight-bold">Comment author must fill out name and e-mail  </span> This is a step towards restricting comment spammers. This option forces commenter to fill-up their name and email address while commenting.
+                                        In reality, the name and e-mail address are never verified, but this is the step most spammers or automated software don't like. It is expected that legitimate commenter will have no problem in filling out this
+                                        short form</li>
+                                    <li><span class="font-weight-bold">Users must be registered and logged in to comment  </span> It is another level of spam protection, enabling this feature will force visitors to register and login to your site before posting
+                                        comments. Standard WordPress registration only requires name and email address like the previous option, but this time the email address will be verified by sending a verification link.</li>
+                                    <li><span class="font-weight-bold">Automatically close comments on articles older than _ days  </span> If you check this box and enter the number of days (e.g. 14 days), then WordPress will stop accepting comments in any
+                                        post older than that amount of days.</li>
+                                    <li><span class="font-weight-bold">Enable threaded (nested) comments _ levels deep  </span> When a comment is posted on any article, you (or any other viewer) can reply to that comment instead of starting a new top-level
+                                        comment. This reply is then nested under the original comment and displayed with an indent so that they can be distinguished. Thereafter, each successive reply will get posted beneath the comment to which it applies.
+                                        For comments with longer threads, WordPress allows up to 10 levels of threading.</li>
+                                    <li><span class="font-weight-bold">Break comments into pages  </span> If you get a hot topic, you may have a never-ending page of comments. This setting allows you to break the comments into pages based on the number of
+                                        comments.
+                                    </li>
+                                    <li><span class="font-weight-bold">Comments should be displayed with the comments at the top of each page </span> You can arrange the comments in the form of ascending or descending order.
+                                    </li>
 
                                 </ul>
                             </p>
