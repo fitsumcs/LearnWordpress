@@ -370,6 +370,19 @@
                                 Since index.php is going to be rendering all of our pages (home, posts, categories, archives) it’s going to be doing a lot of work. 
                               </p>
                               <img class="dashbord " src="../asset/img/WTheme/theme5.png " alt=" ">
+
+                              <p class="mt-3 ">
+                                Note that two functions are used in their most basic form in this loop: <span class="font-weight-bold ">“have_posts”</span> and <span class="font-weight-bold ">“the_post”</span>. The <span class="font-weight-bold ">“have_posts”</span> function informs you if there are any postings in the database to repeat. This function will return true or false: if it returns true, there are posts available to display. If it returns false, there are none.
+                              </p>
+                              <p>
+                                The <span class="font-weight-bold ">“the_post”</span> function retrieves the most recent post and performs the necessary configurations so that it’s displayed chronologically on the theme page. As this happens in a loop, whenever there is a new post, it will be added automatically if the function returns true.
+                              </p>
+                              <p>
+                                The <span class="font-weight-bold ">“the_content”</span> function attaches the content to the file title inserted on the page. The <span class="font-weight-bold ">“the_permalink”</span> function matches a link to each individual post so that the user can access the content on their own and without the full text being displayed on the home page.
+                              </p>
+                              <p>
+                                If you want to add a brief summary under the file title, with the first 200 characters of the content, just insert the <span class="font-weight-bold ">“the_excerpt”</span> function in place of the <span class="font-weight-bold ">“the_content”</span> function. Thus, the user only has access to the full text when clicking on the link.
+                              </p>
                                
 
                 </div>
