@@ -334,7 +334,7 @@
                                <h3 class="font-weight-bold mt-3 ">style.css</h3>
                                <p>For WordPress to recognize our theme and output it properly in the Appearance → Themes list we need to place some WordPress-specific code at the top of style.css, it looks like this:</p>
                                          
-                              <img src="../asset/img/WTheme/theme6.png " alt=" ">
+                              <img src="../asset/img/WTheme/theme5.png " alt=" ">
                             <h2>Description</h2>
                             <hr color="skyblue ">
                             <ul>
@@ -369,7 +369,7 @@
                               <p>
                                 Since index.php is going to be rendering all of our pages (home, posts, categories, archives) it’s going to be doing a lot of work. 
                               </p>
-                              <img class="dashbord " src="../asset/img/WTheme/theme5.png " alt=" ">
+                              <img class="dashbord " src="../asset/img/WTheme/theme6.png " alt=" ">
 
                               <p class="mt-3 ">
                                 Note that two functions are used in their most basic form in this loop: <span class="font-weight-bold ">“have_posts”</span> and <span class="font-weight-bold ">“the_post”</span>. The <span class="font-weight-bold ">“have_posts”</span> function informs you if there are any postings in the database to repeat. This function will return true or false: if it returns true, there are posts available to display. If it returns false, there are none.
@@ -386,6 +386,21 @@
                                <p>
                                 The <span class="font-weight-bold ">“get_header”</span> and <span class="font-weight-bold ">“get_footer”</span> are special wordpress hooks that adds header and footer information to the website. The headers and footers can come from there respective files(header.php, footer.php) in the root directory but if there are none the hooks will display default header and footer.
                                </p>
+
+                               <h3 class="font-weight-bold mt-4 ">Step #3: Adding header and footer fils  </h3>
+                               <p>
+                                 The next step is to create new files in the same folder as your theme, where you added the files style.css and index.php. They are called header.php and footer.php.
+                               </p>
+                               <img class="dashbord mt-3 " src="../asset/img/WTheme/theme7.png " alt=" ">
+                               <p class="mt-3 ">
+                                 Now what these files will do is to overwrite the default header and footer layouts provided by default when you call either the get_header() or get_footer() functions. In fact, if we refresh our website, it looks like the header and footer are gone. This is because we have not added any markup to those files yet. Just for grins, setup the files like so to test this out.
+                               </p>
+                               
+                                <h3 class="font-weight-bold mt-3 ">header.php</h3>
+                                <p>
+                                    This is the file that control's the heading part of the website : 
+                                </p>
+                                <img class="dashbord mt-3 " src="../asset/img/WTheme/theme8.png " alt=" ">
 
                 </div>
             </div>
