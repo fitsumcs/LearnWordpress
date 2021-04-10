@@ -401,10 +401,23 @@
                                     This is the file that control's the heading part of the website : 
                                 </p>
                                 <img class="dashbord mt-3 " src="../asset/img/WTheme/theme8.png " alt=" ">
+                                <p class="mt-3 ">
+                                    To start with, all HTML pages will have a doctype. You would specify that in this file. Additionally, all pages will have an opening html tag, a head section, and an opening body tag. 
+                                </p>
+                                <p>
+                                    We will make use of a few new WordPress functions here as well. Those will be <span class="font-weight-bold ">bloginfo</span> and <span class="font-weight-bold ">body_class</span>. The <span class="font-weight-bold ">bloginfo</span> function will allow us to add information about the blog like name , tagline ..etx.
+                                </p>
+                                <p>
+                                    The purpose of <span class="font-weight-bold "> wp_head()</span>  is to finalize the output in the <head> section of your header.php file. In fact it is meant to go just prior to the closing </head> tag. This becomes important when you start adding various plugins to your site. It prints scripts or data in the head tag on the front end. It is a good practice to always include wp_head() in your themes as many other plugins may rely on this hook to add styles, scripts, or meta elements into the <head> area of the site. 
+                                </p>
+                                <p>
+                                    Most themes will offer the ability to click on the title text of the website, and direct the user to the homepage of the site. This will be achieve by adding a link tag and the href will be<span class="font-weight-bold
+                                            ">" home_url ".</span> 
+                                </p>
 
+                            </div>
                 </div>
             </div>
-    </div>
     </div>
     </main>
     <!-- page-content" -->
