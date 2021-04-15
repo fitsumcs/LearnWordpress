@@ -315,30 +315,39 @@
         <!-- The page content starts here ..... -->
         <main class="page-content ">
             <div class="container-fluid ">
-                <h1>Theme Development Step By Step (Version I)</h1>
+                <h1>Theme Development Step By Step (Version II)</h1>
                 <hr>
                 <div class="row ">
                     <div class="form-group col-md-12 ">
 
                         <div class="article ">
-                            <h3 class="font-weight-bold ">Step #1: Creating The Folder and Files </h3>
+                            <h3 class="font-weight-bold ">Step #1: Working with Template Files </h3>
                                 <p>
-                                    In the themes folder, three other native folders are already stored, which contain three standard themes, provided by WordPress. In addition to them, you must create another folder, which you can name as you wish.
+                                    When WordPress outputs a webpage it searches for the most specific template available, if a template doesn’t exist it will move down the hierarchy until it finds one that does.
                                 </p>
                                 <p>
-                                    In the example below, the folder is named <span class="font-weight-bold ">customtheme</span> . From that point, the new WordPress theme will be created.
+                                    The following diagram shows which template files are called to generate a WordPress page based on the WordPress template hierarchy.
                                 </p>
 
                        
-                                <img src="../asset/img/WTheme/theme2.png " alt=" ">
+                               <a href="https://wphierarchy.com/ " target="_blank " rel="noopener noreferrer "><img class="dashbord " src="../asset/img/WTheme/theme12.png " alt=" "></a> 
 
-                               <h3 class="font-weight-bold mt-3 ">Anatomy of a Theme</h3>
+                               <h3 class="font-weight-bold mt-3 ">Common WordPress Template</h3>
                                <hr>
-                               <p>WordPress Themes typically consist of three main types of files, in addition to images and JavaScript files.</p>
+                               <p>Below is a list of some basic theme templates and files recognized by WordPress.</p>
                                <ul>
-                                   <li><span class="font-weight-bold ">The stylesheet called style.css</span> , which controls the presentation (visual design and layout) of the website pages.</li>
-                                   <li><span class="font-weight-bold ">WordPress template files</span> which control the way the site pages generate the information from your WordPress database to be displayed on the site.</li>
-                                   <li><span class="font-weight-bold ">The optional functions file (functions.php) </span>as part of the WordPress Theme files.</li>
+                                   <li><span class="font-weight-bold ">index.php – </span> The main template file. It is required in all themes.</li>
+                                   <li><span class="font-weight-bold ">style.css – – </span> The main stylesheet. It is required in all themes and contains the information header for your theme.</li>
+                                   <li><span class="font-weight-bold ">header.php – </span> The header template file usually contains your site’s document type, meta information, links to stylesheets and scripts, and other data.</li>
+                                   <li><span class="font-weight-bold ">footer.php – </span> The footer template file usually used for closing tags opened on header.php and place footer information .</li>
+                                   <li><span class="font-weight-bold ">page.php – </span> The page template is used when visitors request individual pages, which are a built-in template.</li>
+                                   <li><span class="font-weight-bold ">page-{slug}.php – </span> The page slug template is used when visitors request a specific page, for example, one with the “about” slug (page-about.php).</li>
+                                   <li><span class="font-weight-bold ">singular.php – </span> The single post template is used when a visitor requests a single post.</li>
+                                   <li><span class="font-weight-bold ">single.php – </span> The main template file. It is required in all themes.</li>
+                                   <li><span class="font-weight-bold ">single-{post-type}.php –  </span> The single post template used when a visitor requests a single post from a custom post type. For example, single-book.php would be used for displaying single posts from a custom post type named book. The index.php is used if a specific query template for the custom post type is not present.</li>
+                                   <li><span class="font-weight-bold ">attachment.php – </span> The image attachment template is a more specific version of attachment.php and is used when viewing a single image attachment. If not present, WordPress will use attachment.php instead.</li>
+                                   <li><span class="font-weight-bold ">404.php – </span> The 404 template is used when WordPress cannot find a post, page, or other content that matches the visitor’s request.</li>
+                                   <li><span class="font-weight-bold "> <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/ " target="_blank " rel="noopener noreferrer ">More</a>   </span> </li>
                                </ul>
 
                                <p>
