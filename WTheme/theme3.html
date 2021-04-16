@@ -352,68 +352,12 @@
 
             
                                <h3 class="font-weight-bold mt-3 ">single.php</h3>
-                               <p>For WordPress to recognize our theme and output it properly in the Appearance → Themes list we need to place some WordPress-specific code at the top of style.css, it looks like this:</p>
+                               <p>The single post template is used when a visitor requests a single post. Will write the same code as index.php </p>
                                          
-                              <img src="../asset/img/WTheme/theme5.PNG " alt=" ">
-                            <h2>Description</h2>
-                            <hr color="skyblue ">
-                            <ul>
-                                <li><span class="font-weight-bold ">Theme Name</span> – You should always supply a theme name. If you don’t then the folder name will be used, my-custom-theme in our example.</li>
-                                <li><span class="font-weight-bold ">Theme URI</span> – If used, the theme URI should provide a link to a page where visitors can learn more about the theme.</li>
-                                <li><span class="font-weight-bold ">Author</span> – Your name goes here.</li>
-                                <li><span class="font-weight-bold ">Author URI</span> – A link to your personal or business website can be placed here.</li>
-                                <li><span class="font-weight-bold ">Description </span>– The description is shown on the wp-admin theme modal and also on the WordPress theme listing.</li>
-                                <li><span class="font-weight-bold ">Version </span>– Version numbers help developers keep track of changes and let users know if they are using the latest version. </li>
-                                <li><span class="font-weight-bold ">License </span>– How you license your theme is up to you, but if you choose a non-GPL-compatible license then you won’t be able to distribute your theme on WordPress.</li>
-                                 <li><span class="font-weight-bold ">License URI</span> – This is simply a link to the license listed above.</li>
-                                 <li><span class="font-weight-bold ">Text Domain </span>– The text domain is used when translating your theme into other languages. </li>
-                                 <li><span class="font-weight-bold ">Tags </span>– Tags are only used if you are uploading your theme to the WordPress.org theme directory. </li>
-        
-                            </ul>
-                              <p>
-                                  Now Under the <span class="font-weight-bold ">Appearance > Themes</span>  , will find out new custom theme and can activate it
-                              </p>
-                              <img class="dashbord " src="../asset/img/WTheme/theme4.png " alt=" ">
-
-                              <h3 class="font-weight-bold mt-4 ">Step #2: Working with the Loop </h3>
-                              <p>
-                                WordPress themes are made up of template files. These are PHP files that contain a mixture of HTML, Template Tags, and PHP code. When you are building your theme, you will use template files to affect the layout and design of different parts of your website. For example, you would use the header.php template to create a header, or the comments.php template to include comments.
-                              </p>
-                              <p>
-                                The most critical template file is index.php, which is the catch-all template if a more-specific template cannot be found in the template hierarchy. Although a theme only needs an index.php template, typically themes include numerous templates to display different content types and contexts.
-                              </p>
-                              <h3 class="font-weight-bold mt-3 ">index.php</h3>
-                              <p>
-                                This file  is the only other strictly required file in the theme folder. Its job is to render all the front-end output for our theme.
-                              </p>
-                              <p>
-                                Since index.php is going to be rendering all of our pages (home, posts, categories, archives) it’s going to be doing a lot of work. 
-                              </p>
-                              <img class="dashbord " src="../asset/img/WTheme/theme6.PNG " alt=" ">
+                              <img src="../asset/img/WTheme/theme13.PNG " alt=" ">
 
                               <p class="mt-3 ">
-                                Note that two functions are used in their most basic form in this loop: <span class="font-weight-bold ">“have_posts”</span> and <span class="font-weight-bold ">“the_post”</span>. The <span class="font-weight-bold ">“have_posts”</span> function informs you if there are any postings in the database to repeat. This function will return true or false: if it returns true, there are posts available to display. If it returns false, there are none.
-                              </p>
-                              <p>
-                                The <span class="font-weight-bold ">“the_post”</span> function retrieves the most recent post and performs the necessary configurations so that it’s displayed chronologically on the theme page. As this happens in a loop, whenever there is a new post, it will be added automatically if the function returns true.
-                              </p>
-                              <p>
-                                The <span class="font-weight-bold ">“the_content”</span> function attaches the content to the file title inserted on the page. The <span class="font-weight-bold ">“the_permalink”</span> function matches a link to each individual post so that the user can access the content on their own and without the full text being displayed on the home page.
-                              </p>
-                              <p>
-                                If you want to add a brief summary under the file title, with the first 200 characters of the content, just insert the <span class="font-weight-bold ">“the_excerpt”</span> function in place of the <span class="font-weight-bold ">“the_content”</span> function. Thus, the user only has access to the full text when clicking on the link.
-                              </p>
-                               <p>
-                                The <span class="font-weight-bold ">“get_header”</span> and <span class="font-weight-bold ">“get_footer”</span> are special wordpress hooks that adds header and footer information to the website. The headers and footers can come from there respective files(header.php, footer.php) in the root directory but if there are none the hooks will display default header and footer.
-                               </p>
-
-                               <h3 class="font-weight-bold mt-4 ">Step #3: Adding header and footer fils  </h3>
-                               <p>
-                                 The next step is to create new files in the same folder as your theme, where you added the files style.css and index.php. They are called header.php and footer.php.
-                               </p>
-                               <img class="dashbord mt-3 " src="../asset/img/WTheme/theme7.png " alt=" ">
-                               <p class="mt-3 ">
-                                 Now what these files will do is to overwrite the default header and footer layouts provided by default when you call either the get_header() or get_footer() functions. In fact, if we refresh our website, it looks like the header and footer are gone. This is because we have not added any markup to those files yet. Just for grins, setup the files like so to test this out.
+                                 Now the single post will use this template file for display , and make sure you update the index.php by replacing <span class="font-weight-bold ">the_content</span>  with <span class="font-weight-bold ">the_excerpt</span>. We have added a div with bootstrap class because will add css later.  
                                </p>
                                
                                 <h3 class="font-weight-bold mt-3 ">header.php</h3>
