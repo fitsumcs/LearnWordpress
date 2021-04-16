@@ -402,7 +402,7 @@
                                </p>
                                <ol >
                                    <li >First Make the Theme to support navigation menu using : <span class="font-weight-bold ">add_theme_support('menus')</span></li>
-                                   <li> Second , register your new navigation menu using : <span class="font-weight-bold ">register_nav_menu() under a custom function and use the : <span class="font-weight-bold ">add_action()</span> hook to make it work</span></li>
+                                   <li> Second , register your new navigation menu using : <span class="font-weight-bold ">register_nav_menu()</span> under a custom function and use the : <span class="font-weight-bold ">add_action()</span> hook to make it work</span></li>
                                    <li>Display the Navigation on any Location in the header section for now using : <span class="font-weight-bold ">wp_nav_menu()</span></li>
                                </ol>
                                <p  class="font-weight-bold ">
@@ -420,7 +420,22 @@
 
                             <img  src="../asset/img/WTheme/theme17.PNG " alt=" ">
 
-
+                            <h5 class="font-weight-bold mt-3 ">
+                                Adding Widget Area 
+                            </h5>
+                            <hr>
+                            <p>
+                                A widget adds content and features to a widget area (also called a sidebar). Widget areas provide a way for users to customize their site. A widget area can appear on multiple pages or on only one page. To add a widget area, 
+                            </p>
+                            <ol >
+        
+                                <li> First , register your new widget area using : <span class="font-weight-bold ">register_sidebar</span> under a custom function and use the : <span class="font-weight-bold ">add_action()</span> hook to make it work</span></li>
+                               
+                                <li> Second , crate a <span class="font-weight-bold ">sidebar.php</span> , and inside the file check if there is active sidebar using  <span class="font-weight-bold
+                                            ">is_active_sidebar</span> , then display the active sidebar using : <span class="font-weight-bold ">is_active_sidebar</span> </li>
+                               
+                                <li>Last , Display the Navigation using using : <span class="font-weight-bold ">get_sidebar</span> function with we have used in 404 page</li>
+                            </ol>
 
 
 
