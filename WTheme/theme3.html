@@ -475,7 +475,35 @@
 
                             <img  src="../asset/img/WTheme/theme21.PNG " alt=" ">
 
-                           
+                            <h5 class="font-weight-bold mt-3 ">Description</h5>
+                            <hr>
+                            <div class="alert alert-danger ">
+
+                              wp_register_style( $handle, $src, $deps, $ver, $media )
+
+                            </div>
+                            <ul>
+                                <li><span class="font-weight-bold ">$handle (string, required)</span> is a unique name for your stylesheet. Other functions will use this "handle " to enqueue and print your stylesheet.</li>
+                                <li><span class="font-weight-bold ">$src (string, required)</span> refers to the URL of the stylesheet. You can use functions like <span class="font-weight-bold ">get_template_directory_uri()</span> to get the style files inside your theme's directory. Don't ever think about hard-coding it!</li>
+                                <li><span class="font-weight-bold ">$deps (array, optional)</span> handles names for dependent styles. If your stylesheet won't work if some other style file is missing, use this parameter to set the "dependencies ".</li>
+                                <li><span class="font-weight-bold ">$ver (string or boolean, optional)</span> is the version number. You can use your theme's version number or make one up if you want. If you don't want to use a version number, set it to null. It defaults to false, which makes WordPress add its own version number.</li>
+                                <li><span class="font-weight-bold ">$media (string, optional)</span> is the <a href="https://www.w3.org/TR/CSS2/media.html#media-types " target="_blank " rel="noopener noreferrer ">CSS media types</a>  like "screen
+                                            ", "handheld ", or "print ". If you're not sure you need to use this, don't use it. It defaults to "all ".</li>
+                            </ul>
+
+                            <h5 class="font-weight-bold mt-3 ">
+                                Enqueue a Stylesheet [Method II]
+                            </h5>
+                            <hr>
+
+                            <p>
+                                To Incorporate css , we can also use the header.php and attach using normal  <span class="font-weight-bold ">link </span>tag. Lets attache the bootstrap file using this way  
+                            </p>
+
+
+                            <p class="alert alert-danger ">
+                                Note : You can still use CDN , instead of downloading the file in the local machine 
+                            </p>
 
 
 
