@@ -342,8 +342,8 @@
                                    <li><span class="font-weight-bold ">footer.php – </span> The footer template file usually used for closing tags opened on header.php and place footer information .</li>
                                    <li><span class="font-weight-bold ">page.php – </span> The page template is used when visitors request individual pages, which are a built-in template.</li>
                                    <li><span class="font-weight-bold ">page-{slug}.php – </span> The page slug template is used when visitors request a specific page, for example, one with the “about” slug (page-about.php).</li>
-                                   <li><span class="font-weight-bold ">singular.php – </span> The single post template is used when a visitor requests a single post.</li>
-                                   <li><span class="font-weight-bold ">single.php – </span> The main template file. It is required in all themes.</li>
+                                   <li><span class="font-weight-bold ">singular.php – </span> The singular template is used for posts when single.php is not found, or for pages when page.php are not found. If singular.php is not found, index.php is used.</li>
+                                   <li><span class="font-weight-bold ">single.php – </span> The single post template is used when a visitor requests a single post..</li>
                                    <li><span class="font-weight-bold ">single-{post-type}.php –  </span> The single post template used when a visitor requests a single post from a custom post type. For example, single-book.php would be used for displaying single posts from a custom post type named book. The index.php is used if a specific query template for the custom post type is not present.</li>
                                    <li><span class="font-weight-bold ">attachment.php – </span> The image attachment template is a more specific version of attachment.php and is used when viewing a single image attachment. If not present, WordPress will use attachment.php instead.</li>
                                    <li><span class="font-weight-bold ">404.php – </span> The 404 template is used when WordPress cannot find a post, page, or other content that matches the visitor’s request.</li>
@@ -351,7 +351,7 @@
                                </ul>
 
             
-                               <h3 class="font-weight-bold mt-3 ">style.css</h3>
+                               <h3 class="font-weight-bold mt-3 ">single.php</h3>
                                <p>For WordPress to recognize our theme and output it properly in the Appearance → Themes list we need to place some WordPress-specific code at the top of style.css, it looks like this:</p>
                                          
                               <img src="../asset/img/WTheme/theme5.PNG " alt=" ">
