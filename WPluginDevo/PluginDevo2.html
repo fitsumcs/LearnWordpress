@@ -371,70 +371,63 @@
                                 that we have but it will be redirected to the index file. By default as a browser interacts it is the first file that it loads when we access a specific URL.
                               </p>
                               <img class="dashbord " src="../asset/img/PluginDevo/p4.png" alt=" ">
+                              <h3 class="font-weight-bold mt-4 ">Step #3: Uninstall Methods </h3>
+                              <p>Your plugin may need to do some clean-up when it is uninstalled from a site.A plugin is considered uninstalled if a user has deactivated the plugin, and then clicks the delete link within the WordPress Admin.</p>
+                              <p>So, we have two methods to uninstall:</p>
+                              <h5 class="font-weight-bold mt-3 ">Method 1: register_uninstall_hook #</h5> 
+                              <p>To set up an uninstall hook, use the register_uninstall_hook() function:
 
-                              <p class="mt-3 ">
-                                Note that two functions are used in their most basic form in this loop: <span class="font-weight-bold ">“have_posts”</span> and <span class="font-weight-bold ">“the_post”</span>. The <span class="font-weight-bold ">“have_posts”</span> function informs you if there are any postings in the database to repeat. This function will return true or false: if it returns true, there are posts available to display. If it returns false, there are none.
-                              </p>
-                              <p>
-                                The <span class="font-weight-bold ">“the_post”</span> function retrieves the most recent post and performs the necessary configurations so that it’s displayed chronologically on the theme page. As this happens in a loop, whenever there is a new post, it will be added automatically if the function returns true.
-                              </p>
-                              <p>
-                                The <span class="font-weight-bold ">“the_content”</span> function attaches the content to the file title inserted on the page. The <span class="font-weight-bold ">“the_permalink”</span> function matches a link to each individual post so that the user can access the content on their own and without the full text being displayed on the home page.
-                              </p>
-                              <p>
-                                If you want to add a brief summary under the file title, with the first 200 characters of the content, just insert the <span class="font-weight-bold ">“the_excerpt”</span> function in place of the <span class="font-weight-bold ">“the_content”</span> function. Thus, the user only has access to the full text when clicking on the link.
-                              </p>
-                               <p>
-                                The <span class="font-weight-bold ">“get_header”</span> and <span class="font-weight-bold ">“get_footer”</span> are special wordpress hooks that adds header and footer information to the website. The headers and footers can come from there respective files(header.php, footer.php) in the root directory but if there are none the hooks will display default header and footer.
-                               </p>
+                                register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');</p>
 
-                               <h3 class="font-weight-bold mt-4 ">Step #3: Adding header and footer fils  </h3>
-                               <p>
-                                 The next step is to create new files in the same folder as your theme, where you added the files style.css and index.php. They are called header.php and footer.php.
-                               </p>
-                               <img class="dashbord mt-3 " src="../asset/img/WTheme/theme7.png " alt=" ">
+                              <h5 class="font-weight-bold mt-3 ">Method 2: uninstall.php #</h5>
+                              <p>To use this method we need to create an uninstall.php file inside the root folder of our plugin. This magic file is run automatically when the users deletes the plugin.</p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p6.png" alt=" ">
+                              <p>Always check for the constant WP_UNINSTALL_PLUGIN in uninstall.php before doing anything. This protects against direct access.
+                                The constant will be defined by WordPress during the uninstall.php invocation. The constant is NOT defined when uninstall is performed by register_uninstall_hook().</p>
+                              <h3 class="font-weight-bold mt-4 ">Step #4: Global Absolute Path</h3>  
+
+                              <p>After we create our Contact_Form_Plugin.php. file the first thing we have to do is create an if statement condition.  </p>
+                              <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p5.png " alt=" "> <br><br>   
+                                                  
+                              <p>ABSPATH is the global absolute path that is the constant variable defined by Wordpress.So, if this variable is not defined we are telling our plugin to die. Sometimes instead of 'die' we can use 'exit;'.
+                                When we initialize our wordpress website when all things in the backgroud are happening this constant variable is defined by WordPress and this constant valid variable carries itself throughout our entire WordPress installation if is only
+                                the software itself is the CMS,PHP code or other scripting language that are accessing our PHP file if something external from our website is accessing those files these ABSPATH constant varibale is not defined so if this is not defined kill the execution of this plugin 
+                                because if this is not defined someone is accessing the file without the permission granted by WordPress. We dont want to trigger any functionality of the plugin because all the plugin interact directly with database and exposing database vulnerabilities. </p>
+                               
+
+                             <h3 class="font-weight-bold mt-4 ">Step #5: Using include Files </h3>
+                             <p>Another option as you develop your plugin is to create extra PHP files, known as include files. If you have a lot of these, you might create multiple folders for different types of include file, or you might just create one folder called includes.</p>
+                             <p>We will create a folder called includes. After that we will create two php files, form1.php and setting.php</p>  
+                             <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p7.png " alt=" ">
                                <p class="mt-3 ">
                                  Now what these files will do is to overwrite the default header and footer layouts provided by default when you call either the get_header() or get_footer() functions. In fact, if we refresh our website, it looks like the header and footer are gone. This is because we have not added any markup to those files yet. Just for grins, setup the files like so to test this out.
                                </p>
                                
-                                <h3 class="font-weight-bold mt-3 ">header.php</h3>
+                                <h3 class="font-weight-bold mt-3 ">form1.php</h3>
                                 <p>
-                                    This is the file that control's the heading part of the website : 
+                                    This is the file that contain the contact form that we created basically it is an html code : 
                                 </p>
-                                <img class="dashbord mt-3 " src="../asset/img/WTheme/theme8.PNG " alt=" ">
-                                <p class="mt-3 ">
-                                    To start with, all HTML pages will have a doctype. You would specify that in this file. Additionally, all pages will have an opening html tag, a head section, and an opening body tag. 
-                                </p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p8.png" alt=" ">
+                               
+                                <h3 class="font-weight-bold mt-3 ">Setting.php</h3>
                                 <p>
-                                    We will make use of a few new WordPress functions here as well. Those will be <span class="font-weight-bold ">bloginfo</span> and <span class="font-weight-bold ">body_class</span>. The <span class="font-weight-bold
-                                            ">bloginfo</span> function will allow us to add information about the blog like name , tagline ..etx. The <span class="font-weight-bold ">body_class()</span>  is a helper function provided by WordPress that will output a list of useful CSS classes which describe the page being displayed. 
+                                    This is the file that contain the short code that is going to be displayed:
                                 </p>
-                                <p>
-                                    The purpose of <span class="font-weight-bold "> wp_head()</span>  is to finalize the output in the <head> section of your header.php file. In fact it is meant to go just prior to the closing </head> tag. This becomes important when you start adding various plugins to your site. It prints scripts or data in the head tag on the front end. It is a good practice to always include wp_head() in your themes as many other plugins may rely on this hook to add styles, scripts, or meta elements into the <head> area of the site. 
-                                </p>
-                                <p>
-                                    Most themes will offer the ability to click on the title text of the website, and direct the user to the homepage of the site. This will be achieve by adding a link tag and the href will be<span class="font-weight-bold "> “home_url”.</span>
-                                </p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p9.png " alt=" ">
 
-                                <h3 class="font-weight-bold mt-3 ">footer.php</h3>
-                                <p>
-                                    Recall that in our header.php file we have opening html and body tags. Those need to be closed at some point. The footer.php file is a perfect place to do that. So we will add closing </html> and </body> tags in addition to making a call to the wp_footer() function.
-                                </p>
-                                <img class="dashbord mt-3 " src="../asset/img/WTheme/theme9.PNG " alt=" ">
-                                <p class="mt-3 ">
-                                    The <span class="font-weight-bold ">wp_footer()</span> , which is for outputting data or doing background actions that run just before the closing body tag.
-                                </p>
-
-                                <h3 class="font-weight-bold mt-4 ">Step #4: Adding screenshot image   </h3>
-                                <p>
-                                    Create a screenshot for your theme. The screenshot should be named screenshot.png, and should be placed in the top level directory. The screenshot should accurately show the theme design and saved in PNG format. While .jpg, .jpeg, and .gif are also valid extensions and file formats for the screenshot, they are not recommended.
-                                </p>
-                                <img class="dashbord mt-3 " src="../asset/img/WTheme/theme11.PNG " alt=" ">
-                                <p>
-                                    We are using the following <a href="../asset/img/WTheme/screenshot.jpg " download>image</a>  and the theme dashboard will look like this : 
-                                </p>
-                                <img class="dashbord mt-3 " src="../asset/img/WTheme/theme10.PNG " alt=" ">
-
+                                <h3 class="font-weight-bold mt-4 ">Step #6: Adding Function  </h3>
+                               <p class="mt-3">Now it’s time to write some function in our Contact_Form_Plugin.php </p>
+                               <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p10.png" alt=" ">
+                               <p class="mt-3"> The <span class="font-weight-bold ">add_shortcode()</span>function is used whenever we call our shortcode it will display the contact form that we had created.   </p>
+                               <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p11.png" alt=" ">
+                               <p>We use the <span class="font-weight-bold ">add_action() </span> function to hook our code to an action hook, with two parameters: the name of the action hook and the name of our function.
+                                Now try saving your files and going back to your site. You’ll see that the contact form has been added to your admin menu (assuming you’ve activated the plugin).</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p12.png" alt=" ">
+                                <h3 class="font-weight-bold mt-4 ">Step #7: Enqueue Stylesheets and Scripts </h3>
+                                <p>If you need to use custom styling or scripts in your plugin, you could add them right into your plugin file—but that’s not best practice. Instead, you should create stylesheets and scripts as separate files in your plugin folder and enqueue those, using a function provided by WordPress.</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p13.png" alt=" ">
+                                <p>We then need to enqueue that file in our plugin so that it can be used by WordPress. Add this to our main plugin file, above or below the functions we already have.</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p14.png" alt=" ">
                                 <p class="font-weight-bold mt-3 ">The Full Source Code(<span class="font-italic text-info ">Check Version I</span> ) : <a href="https://github.com/fitsumcs/ThemeDemo.git " target="_blank ">Custom WordPress Theme</a> </p>
                             </div>
                 </div>
