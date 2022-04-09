@@ -119,6 +119,24 @@
                         </li>
                         <!-- End of Third  Menu -->
 
+                        <!-- Fourth Menu -->
+                        <li class="sidebar-dropdown ">
+                            <a href="# ">
+                                <i class="fa fa-tachometer-alt "></i>
+                                <span>Theme Development</span>
+                            </a>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    <li>
+                                        <a href="./theme1.html ">Introduction</a>
+                                    </li>
+                                    <li>
+                                        <a href="# ">Develope Sample Theme </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End of Fourth Menu -->
 
                                   <!-- Fourth  Menu -->
                                   <li class="sidebar-dropdown ">
@@ -201,7 +219,8 @@
 
         </li>
         <!-- End of Six   Menu -->
-
+        
+        
                       <!-- Seventh Menu -->
                       <li class="sidebar-dropdown ">
                         <a href="# ">
@@ -243,8 +262,8 @@
                                             </a>
                                         </li>
                                         <!-- End of Ninth Menu -->
-                                        
-                                 <!-- Tenth Menu -->
+
+                            <!-- Tenth Menu -->
                                  <li class="sidebar-dropdown ">
                                     <a href="# ">
                                         <i class="fa fa-tachometer-alt "></i>
@@ -265,7 +284,7 @@
                                     </div>
                                 </li>
                                 <!-- End of tenth  Menu -->
-                                                
+                                        
                         <!-- Fifth Menu -->
                         <li class="sidebar-dropdown ">
                             <a href="# ">
@@ -275,11 +294,11 @@
                             <div class="sidebar-submenu ">
                                 <ul>
                                     <li>
-                                        <a href="../WPluginDevo/PluginDevo1.html ">Introduction</a>
+                                        <a href="./PluginDevo1.html ">Introduction</a>
                                     </li>
                                     <li>
-                                        <a href="../WPluginDevo/PluginDevo2.html ">Plugin Development I</a>
-                                        <a href="../WPluginDevo/PluginDevo3.html ">Plugin Development II</a>
+                                        <a href="/WPluginDevo/PluginDevo2.html ">Plugin Development I</a>
+                                        <a href="/WPluginDevo/PluginDevo3.html ">Plugin Development II</a>
                                     </li>
                                 </ul>
                             </div>
@@ -297,103 +316,126 @@
         <!-- The page content starts here ..... -->
         <main class="page-content ">
             <div class="container-fluid ">
-                <h1>WordPress Theme Development</h1>
+                <h1>Plugin Development Step By Step (Version I)</h1>
                 <hr>
                 <div class="row ">
                     <div class="form-group col-md-12 ">
 
                         <div class="article ">
-                            <h3>What is Wordpress Theme?</h4>
-                                <div class="alert alert-dark ">
-                                    <figure>
-                                        <blockquote cite="https://www.huxley.net/bnw/four.html ">
-                                            <q>WordPress themes are made up of template files. These are PHP files that contain a mixture of HTML, Template Tags, and PHP code.</q>
-                                        </blockquote>
-                                        <figcaption>Learn Wordpress</figcaption>
-                                    </figure>
-                                </div>
+                            <h3 class="font-weight-bold ">Step #1: Creating The Folder and Files </h3>
+                                <p>
+                                Start by creating a folder in your wp-content/plugins directory. Inside that, create a PHP file for your plugin.
+                                </p>
+                                <p>Give them both a name that makes sense and includes a prefix. I’m calling my folder Contact_Form_Plugin and my file Contact_Form_Plugin.php.</p>
+                       
+                                <img src="../asset/img/PluginDevo/p1.png" alt=" ">
 
-
-                                <p>
-                                    Creating and developing a theme in WordPress can be very simple if you have some knowledge of HTML, CSS, and JavaScript. Despite this, some beginners can also complete this mission with the right instructions. You just need to have a properly configured development environment and the CMS (Content Management System) installed.
-                                </p>
-
-                                <p>
-                                    There are so many free themes available to you when you are running a WordPress website. Beyond the free themes, you might also choose to pay a premium for professionally made WordPress themes that look great and have fantastic features. So why learn how to create your own theme from scratch? 
-                                </p>
-                                <p>
-                                The answer is that no matter what theme you are using, there is going to come a time when you want to make simple changes to your website. Some of those changes might be able to be accommodated by a simple plugin or widget. 
-                                </p>
-                                <p>
-                                Many times however, it makes more sense to understand what it is you want to change, how to change it, and avoid turning your WordPress website into a mess of plugins and add-ons that become unwieldy. With just a bit of foundation level knowledge, you’ll be confident in modifying your theme, or simply building your own from scratch.
-                                </p>
-
-                                <p>
-                                    All in short, developing a custom theme : 
-                                </p>
-            
+                               <h3 class="font-weight-bold mt-3 ">Header Requirements</h3>
+                               <hr>
+                               <p>Next what we need to do is open our Contact_Form_Plugin.php file and add some meta data. It contains informations like Plugin name, plugin URL, discription, version, Author, Author URI etc... At a minimum, a header comment must contain the Plugin Name. </p>
+                               <img src="../asset/img/PluginDevo/p2.png " alt=" "><br>
+                               <h2>Description</h2>
+                               <hr color="skyblue ">
                                 <ul>
-                                    <li>It's an opportunity to learn more about CSS, HTML, and PHP.</li>
-                                    <li>It's an opportunity to put your expertise with CSS, HTML, and PHP to work.</li>
-                                    <li>It's creative.</li>
-                                    <li>It's fun (most of the time).</li>
-                                    <li>If you <a href="https://make.wordpress.org/themes/handbook/review/ " target="_blank " rel="noopener noreferrer ">release it to the public</a> , you can feel good that you shared and gave something back to the WordPress Community (okay, bragging rights)</li>
+                                    <li><span class="font-weight-bold ">Plugin Name</span>: (required) The name of your plugin, which will be displayed in the Plugins list in the WordPress Admin.</li>
+                                    <li><span class="font-weight-bold ">Plugin URI</span>: The home page of the plugin, which should be a unique URL, preferably on your own website. This must be unique to your plugin. You cannot use a WordPress.org URL here.</li>
+                                    <li><span class="font-weight-bold ">Description</span>: A short description of the plugin, as displayed in the Plugins section in the WordPress Admin. Keep this description to fewer than 140 characters.</li>
+                                    <li><span class="font-weight-bold ">Version</span>: The current version number of the plugin, such as 1.0 or 1.0.3.</li>
+                                    <li><span class="font-weight-bold ">Author</span>: The name of the plugin author. Multiple authors may be listed using commas.</li>
+                                    <li><span class="font-weight-bold ">Author URI</span>: The author’s website or profile on another website, such as WordPress.org.</li>
+                                    <li><span class="font-weight-bold ">Requires at least</span>: The lowest WordPress version that the plugin will work on.</li>
+                                    <li><span class="font-weight-bold ">Requires PHP</span>: The minimum required PHP version.</li>
+                                    <li><span class="font-weight-bold ">License</span>: The short name (slug) of the plugin’s license (e.g. GPLv2)</li>
+                                    <li><span class="font-weight-bold ">License URI</span>: A link to the full text of the license (e.g. https://www.gnu.org/licenses/gpl-2.0.html).</li>
+                                    <li><span class="font-weight-bold ">Text Domain</span>: The gettext text domain of the plugin. More information can be found in the Text Domain section of the How to Internationalize your Plugin page.</li>
                                 </ul>
+                            </p>
+                               <p>Now, if you save your file and go to the Plugins screen in your development site, you’ll see the plugin on the screen:</p>
+                                         
+                              <img src="../asset/img/PluginDevo/p3.png " alt=" ">
+                              <p>We can activate it if we want, but it won’t do anything yet because we haven’t added any code to it.</p>
+                           
+                              <h3 class="font-weight-bold mt-4 ">Step #2: Secure our file</h3>
+                              <p>
+                                By validating, sanitizing, and escaping all data that goes in and out of our application, we are protecting our users from one of the most common attack methods.
+                              </p>
+                              <div class="alert alert-dark ">
+                                <p><span class="font-weight-bold ">Validating</span> – is checking the data submitted before doing anything, such as storing it in the database.</p>
+                                <p>
+                                 <span class="font-weight-bold ">Sanitizing</span> – data is processing the submitted information and making sure it does not contain anything we do not want to store, such as removing any unwanted characters.</p>
+                                <p>
+                                 <span class="font-weight-bold ">Escaping</span> –  is preventing any malicious code from actually executing in your browser. </p>
+                               </div>
+                              <h3 class="font-weight-bold mt-3 ">index.php</h3>
+                              <p>
+                                In order to have a little bit of security in our plugin we need to create a standard index.php. This file helps if someone tries to access directly our plugin folder it will not go into all the available files 
+                                that we have but it will be redirected to the index file. By default as a browser interacts it is the first file that it loads when we access a specific URL.
+                              </p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p4.png" alt=" ">
+                              <h3 class="font-weight-bold mt-4 ">Step #3: Uninstall Methods </h3>
+                              <p>Your plugin may need to do some clean-up when it is uninstalled from a site.A plugin is considered uninstalled if a user has deactivated the plugin, and then clicks the delete link within the WordPress Admin.</p>
+                              <p>So, we have two methods to uninstall:</p>
+                              <h5 class="font-weight-bold mt-3 ">Method 1: register_uninstall_hook #</h5> 
+                              <p>To set up an uninstall hook, use the register_uninstall_hook() function:
 
-                                <h3 class="font-weight-bold mt-4 ">Installed Theme Location</h5>
-                                    <hr>
-                                    <p>
-                                       We know that a WordPress installation usually has a root directory, also called wordpress. In this directory are the files and folders that are shown below.
-                                    </p>
+                                register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');</p>
 
-                                    <p>
-                                       <span class="font-weight-bold ">Files :</span>  composer.json , index.php , license.txt , readme.html, wp-activate.php, wp-blog-header.php, wp-comments-post.php, wp-config.php, wp-config-sample.php, wp-cron.php, wp-links-opml.php, wp-load.php, wp-login.php, wp-mail.php, wp-settings.php, wp-signup.php, wp-trackback.php, xmlrpc.php
-                                    </p>
-                                    <p>
-                                      <span class="font-weight-bold ">Folders :</span>  wp-admin, wp-content, wp-includes
-                                    </p>
-                                    <p>
+                              <h5 class="font-weight-bold mt-3 ">Method 2: uninstall.php #</h5>
+                              <p>To use this method we need to create an uninstall.php file inside the root folder of our plugin. This magic file is run automatically when the users deletes the plugin.</p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p6.png" alt=" ">
+                              <p>Always check for the constant WP_UNINSTALL_PLUGIN in uninstall.php before doing anything. This protects against direct access.
+                                The constant will be defined by WordPress during the uninstall.php invocation. The constant is NOT defined when uninstall is performed by register_uninstall_hook().</p>
+                              <h3 class="font-weight-bold mt-4 ">Step #4: Global Absolute Path</h3>  
+
+                              <p>After we create our Contact_Form_Plugin.php. file the first thing we have to do is create an if statement condition.  </p>
+                              <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p5.png " alt=" "> <br><br>   
+                                                  
+                              <p>ABSPATH is the global absolute path that is the constant variable defined by Wordpress.So, if this variable is not defined we are telling our plugin to die. Sometimes instead of 'die' we can use 'exit;'.
+                                When we initialize our wordpress website when all things in the backgroud are happening this constant variable is defined by WordPress and this constant valid variable carries itself throughout our entire WordPress installation if is only
+                                the software itself is the CMS,PHP code or other scripting language that are accessing our PHP file if something external from our website is accessing those files these ABSPATH constant varibale is not defined so if this is not defined kill the execution of this plugin 
+                                because if this is not defined someone is accessing the file without the permission granted by WordPress. We dont want to trigger any functionality of the plugin because all the plugin interact directly with database and exposing database vulnerabilities. </p>
                                
-                                     The folder we are looking for is wp-content, where <span class="font-weight-bold ">themes and plugins are stored </span> . Inside, there is a folder called <span class="font-weight-bold ">themes</span> , which must contain all your WordPress site’s themes, including the one you will create so that the CMS recognizes the new settings.
-                                    </p>
 
-                                <img src="../asset/img/WTheme/theme1.png " alt=" ">
+                             <h3 class="font-weight-bold mt-4 ">Step #5: Using include Files </h3>
+                             <p>Another option as you develop your plugin is to create extra PHP files, known as include files. If you have a lot of these, you might create multiple folders for different types of include file, or you might just create one folder called includes.</p>
+                             <p>We will create a folder called includes. After that we will create two php files, form1.php and setting.php</p>  
+                             <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p7.png " alt=" ">
+                               <p class="mt-3 ">
+                                 Now what these files will do is to overwrite the default header and footer layouts provided by default when you call either the get_header() or get_footer() functions. In fact, if we refresh our website, it looks like the header and footer are gone. This is because we have not added any markup to those files yet. Just for grins, setup the files like so to test this out.
+                               </p>
+                               
+                                <h3 class="font-weight-bold mt-3 ">form1.php</h3>
+                                <p>
+                                    This is the file that contain the contact form that we created basically it is an html code and bootstrap : 
+                                </p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p8.png" alt=" ">
+                               
+                                <h3 class="font-weight-bold mt-3 ">Setting.php</h3>
+                                <p>
+                                    This is the file that contain the short code that is going to be displayed:
+                                </p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p9.png " alt=" ">
 
-                                <h3 class="font-weight-bold mt-4 ">How to Develope Theme</h5>
-                                    <hr>
-                                    <p>
-                                        There are three ways we can start developing our own theme : 
-                                    </p>
-                                    <ol>
-                                        <li>
-                                            <span class="font-weight-bold ">From Scratch : </span>By Building the theme from scratch with the template files , css and Javascript 
-                                        </li>
-                                        <li>
-                                            <span class="font-weight-bold
-                                            ">Starter Theme :</span>   A WordPress starter theme helps developers to start with a solid foundation. It can become the base for your theme development process and gives you a good head start.E.g <a href="https://wpastra.com/ " target="_blank " rel="noopener noreferrer ">Astra</a>  , <a href="https://underscores.me/ " target="_blank " rel="noopener noreferrer ">Underscores</a> , <a href="https://wordpress.org/themes/wp-bootstrap-starter/
-                                            " target="_blank " rel="noopener noreferrer ">WP BootStrap Starter</a> , etc. 
-                                        </li>
-                                        <li>
-                                        <span class="font-weight-bold "> Child Themes:</span> The simplest Theme possible is a child theme which includes only a style.css file, plus any images. This is possible because it is a child of another theme which acts as its parent.
-                                       </li>
-                                     
-                                    </ol>
-
-
-                                    <h3 class="font-weight-bold mt-4 ">Reference</h5>
-                                        <hr>
-                                        <ul>
-                                            <li><a href="https://wpastra.com/wordpress-starter-themes/ " target="_blank " rel="noopener noreferrer ">Ultimate WordPress Starter Themes</a> </li>
-                                            <li><a href="https://www.wpbeginner.com/wp-themes/21-best-wordpress-starter-themes-for-developers/ " target="_blank " rel="noopener noreferrer ">19 Best WordPress Starter Themes</a> </li>
-                                            <li><a href="https://www.hostinger.com/tutorials/how-to-create-wordpress-child-theme " target="_blank " rel="noopener noreferrer ">Create and Customize a WordPress Child Theme</a></li>
-                                        </ul>
-
-                        </div>
-                    </div>
+                                <h3 class="font-weight-bold mt-4 ">Step #6: Adding Function  </h3>
+                               <p class="mt-3">Now it’s time to write some function in our Contact_Form_Plugin.php </p>
+                               <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p10.png" alt=" ">
+                               <p class="mt-3"> The <span class="font-weight-bold ">add_shortcode()</span>function is used whenever we call our shortcode it will display the contact form that we had created.   </p>
+                               <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p11.png" alt=" ">
+                               <p>We use the <span class="font-weight-bold ">add_action() </span> function to hook our code to an action hook, with two parameters: the name of the action hook and the name of our function.
+                                Now try saving your files and going back to your site. You’ll see that the contact form has been added to your admin menu (assuming you’ve activated the plugin).</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p12.png" alt=" ">
+                                <h3 class="font-weight-bold mt-4 ">Step #7: Enqueue Stylesheets and Scripts </h3>
+                                <p>If you need to use custom styling or scripts in your plugin, you could add them right into your plugin file—but that’s not best practice. Instead, you should create stylesheets and scripts as separate files in your plugin folder and enqueue those, using a function provided by WordPress.</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p13.png" alt=" ">
+                                <p>We then need to enqueue that file in our plugin so that it can be used by WordPress. Add this to our main plugin file, above or below the functions we already have.</p>
+                                <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p14.png" alt=" ">
+                                <p class="font-weight-bold mt-3 ">The Full Source Code(<span class="font-italic text-info ">Check Version I</span> ) : <a href="https://github.com/meronmesay/Plugin-development-demo.git " target="_blank ">Custom WordPress Plugin</a> </p>
+                            </div>
                 </div>
             </div>
-        </main>
-        <!-- page-content" -->
+    </div>
+    </main>
+    <!-- page-content" -->
                             </div>
                             <!-- page-wrapper -->
 

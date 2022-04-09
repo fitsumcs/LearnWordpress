@@ -119,6 +119,25 @@
                         </li>
                         <!-- End of Third  Menu -->
 
+                        <!-- Fourth Menu -->
+                        <li class="sidebar-dropdown ">
+                            <a href="# ">
+                                <i class="fa fa-tachometer-alt "></i>
+                                <span>Theme Development</span>
+                            </a>
+                            <div class="sidebar-submenu ">
+                                <ul>
+                                    <li>
+                                        <a href="./theme1.html ">Introduction</a>
+                                    </li>
+                                    <li>
+                                        <a href="# ">Develope Sample Theme </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End of Fourth Menu -->
+
                                   <!-- Fourth  Menu -->
                                   <li class="sidebar-dropdown ">
                                     <a href="# ">
@@ -148,7 +167,8 @@
                                 </li>
                                 <!-- End of Fourth  Menu -->
 
-                                                                                <!-- Fifth  Menu -->
+                                
+                                                            <!-- Fifth  Menu -->
                         <li class="sidebar-dropdown ">
                             <a href="# ">
                                 <i class="fa fa-tachometer-alt "></i>
@@ -242,29 +262,29 @@
                                             </a>
                                         </li>
                                         <!-- End of Ninth Menu -->
-                                        
-                   <!-- Tenth Menu -->
-                   <li class="sidebar-dropdown ">
-                    <a href="# ">
-                        <i class="fa fa-tachometer-alt "></i>
-                        <span>Theme Development</span>
-                    </a>
-                    <div class="sidebar-submenu ">
-                        <ul>
-                            <li>
-                                <a href="../WTheme/theme1.html ">Introduction</a>
-                            </li>
-                            <li>
-                                <a href="../WTheme/theme2.html ">Theme Development I </a>
-                            </li>
-                            <li>
-                                <a href="../WTheme/theme3.html ">Theme Development II </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- End of tenth  Menu -->
 
+                            <!-- Tenth Menu -->
+                                 <li class="sidebar-dropdown ">
+                                    <a href="# ">
+                                        <i class="fa fa-tachometer-alt "></i>
+                                        <span>Theme Development</span>
+                                    </a>
+                                    <div class="sidebar-submenu ">
+                                        <ul>
+                                            <li>
+                                                <a href="./theme1.html ">Introduction</a>
+                                            </li>
+                                            <li>
+                                                <a href="./theme2.html ">Theme Development I </a>
+                                            </li>
+                                            <li>
+                                                <a href="./theme3.html ">Theme Development II </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- End of tenth  Menu -->
+                                        
                         <!-- Fifth Menu -->
                         <li class="sidebar-dropdown ">
                             <a href="# ">
@@ -274,11 +294,11 @@
                             <div class="sidebar-submenu ">
                                 <ul>
                                     <li>
-                                        <a href="../WPluginDevo/PluginDevo1.html ">Introduction</a>
+                                        <a href="./PluginDevo1.html ">Introduction</a>
                                     </li>
                                     <li>
-                                        <a href="../WPluginDevo/PluginDevo2.html ">Plugin Development I</a>
-                                        <a href="../WPluginDevo/PluginDevo3.html ">Plugin Development II</a>
+                                        <a href="/WPluginDevo/PluginDevo2.html ">Plugin Development I</a>
+                                        <a href="/WPluginDevo/PluginDevo3.html ">Plugin Development II</a>
                                     </li>
                                 </ul>
                             </div>
@@ -296,127 +316,65 @@
         <!-- The page content starts here ..... -->
         <main class="page-content ">
             <div class="container-fluid ">
-                <h1>WordPress Installation and Configuration</h1>
+                <h1>Plugin Development Step By Step (Version II)</h1>
                 <hr>
                 <div class="row ">
                     <div class="form-group col-md-12 ">
 
                         <div class="article ">
-                            <h3>Pre Installation</h4>
-                                We need the following application in our machine before we start the installation :
-                                <ul>
-                                    <li>Server [<a href="https://www.wampserver.com/en/ " target="_blank " rel="noopener noreferrer ">WAPM</a> , <a href="https://www.apachefriends.org/index.html " target="_blank " rel="noopener noreferrer
-                                            ">XAPM</a> , <a href="https://ubuntu.com/server/docs/lamp-applications "
-                                            target="_blank " rel="noopener noreferrer ">LAPM</a> ]
-                                        <ul>
-                                            <li>PHP 7.4 or greater</li>
-                                            <li>MySQL 5.6 or MariaDB 10.1 or greater</li>
-                                        </ul>
-                                    </li>
-                                    <li>Web Browser </li>
-                                    <li>Text Editor</li>
+                            <h3 class="font-weight-bold ">Step #1: Making Customization settings form </h3>
+                                <p>
+                               In order to customize our contact form we need to add some new function in our main php file.
+                                </p>
+                                
+                                <img src="../asset/img/PluginDevo/p17.png" alt=" ">
+                                <p class="mt-3">This call back function contain the Customized form and later we will add fields to it.
+                                    The <span class="font-weight-bold ">option.php</span> will take the form value and save them in database.
+                                </p>
+                           
+                              <h3 class="font-weight-bold mt-4 ">Step #2: Adding section to the setting page</h3>
+                              <p>
+                                This function will add section to the setting page. And there might be other setting pages so to differ it from other settings we add "mycontact-settings-page".
+                              </p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p18.png" alt=" ">
+                              <h3 class="font-weight-bold mt-4 ">Step #3: Adding Fields to the section</h3>
+                              <p>So, we will see two example of how to add field to the section we created:</p>
+                              <h4 class="font-weight-bold mt-3 ">Example 1.Background color</h4> 
+                              <img class="dashbord " src="../asset/img/PluginDevo/p19.png" alt=" ">
+                              <p>The first function is used to register the field and the second function is used to add it to the section.
+                                  As you can see a default value has been given to it which is white.And  <span class="font-weight-bold ">'sanitize_text_field'</span> means to only use a text_field and not other type of inputs.
+                              </p>
+                              <p class="mt-3">After we save this we should go back and check our wordpress.</p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p20.png" alt=" ">
+                              <h4 class="font-weight-bold mt-3 ">Example 2.Font Type</h4>
+                              <p>Just like background color this field will also have the same 2 functions. The default value will be 'garamond,serif'.</p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p21.png" alt=" ">
+                              <p class="mt-3">After we save this we should go back and check our wordpress.</p>
+                              <img class="dashbord " src="../asset/img/PluginDevo/p22.png" alt=" ">
 
-                                </ul>
+                              <h3 class="font-weight-bold mt-4 ">Step #4: Create callback function</h3>  
 
+                              <p>The following callback function is for the background color and font type. The php code <span class="font-weight-bold ">"echo isset($mycontact_btn_color) ? esc_attr( $mycontact_btn_color ) :
+                                ''; "</span> is used to check if there is a value stored in database and if there is not to leave it empty. But since we already gave it a default value even if there is no value in database we will see the default value.</p>
+                              <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p23.png " alt=" "> <br><br>   
 
-                                <h3>Installation Steps</h4>
-                                    <hr>
-                                    <ol>
-                                        <li>
-                                            <p>First , Download the latest version of WordPress from the <a href="http://www.wordpress.org " target="_blank " rel="noopener noreferrer ">WordPress.org</a> website. It will download as a zip file.</p>
-                                            <img src="../asset/img/wordpress/downloadPage.jpg " alt=" ">
-                                        </li>
-                                        <li class="mt-3 ">
-                                            <p>Then , extract the zip file and copy the ‘wordpress’ folder..</p>
-                                            <img src="../asset/img/wordpress/extractwp.jpg " alt=" ">
-                                        </li>
-                                        <li class="mt-3 ">
-                                            <p>Then , past the wordpress folder in to the server installation folder [wamp , xamp]</p>
-                                            <p> <span class="font-weight-bold ">Note :</span> If it is wamp navigate to www and paste the folder. if it is xamp navigate to htdocs and past the folder</p>
-                                            <p>
-                                                You can rename the ‘wordpress’ folder to anything you want, such as mysite, testsite, etc. This will be the URL of your local WordPress site, so be sure to choose something you’ll remember easily.
-                                            </p>
-                                        </li>
-                                        <li class="mt-3 ">
-                                            <p>Lets create a database before we start the Installation Wizard </p>
-                                            <ul>
-                                                <li>
-                                                    <p> Open phpMyAdmin dashboard and login </p>
-                                                    <img class="dashbord " src="../asset/img/wordpress/phpmyadmin1.png " alt=" ">
-
-                                                </li>
-                                                <li>
-                                                    <p> Click on the Databases tab at the top of the screen and Create a with any name[wordpress, test ..] </p>
-                                                    <img class="dashbord " src="../asset/img/wordpress/createnewdatabase.png " alt=" ">
-
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="mt-3 ">
-                                            <p>Next, you can open the web browser and go to http://localhost/wordpress/</p>
-                                            <p> <span class="font-weight-bold ">Note :</span>Will keep the original name here, but you’ll need to use whatever you changed yours to. Now you’ll get access to the WordPress installer: <span class="text-info ">Select
-                                                a language and move on to the next step</span>
-                                            </p>
-                                            <img src="../asset/img/wordpress/installerLanguage.png " alt=" ">
-                                        </li>
-                                        <li class="mt-3 ">
-                                            <p>After that, you need to enter your database details like database name, username, password, host, and table prefix</p>
-                                            <p> <span class="font-weight-bold ">Note :</span> When you get to the database details, enter them like this:</p>
-                                            <ul class="my-3 ">
-
-                                                <li> Database Name = Name of the database you created in PHPMyAdmin</li>
-                                                <li>Username = “root”</li>
-                                                <li>Password = leave blank</li>
-                                                <li>leave the database host and table prefix as-is.</li>
-
-                                            </ul>
-                                            <img src="../asset/img/wordpress/enterdbdetails.jpg " alt=" ">
-                                            <p class="text-info ">Click on the ‘Submit’ button and WordPress will create a configuration file for you in the backend</p>
-                                        </li>
-
-                                        <li>
-                                            <p>On the next screen, you will see a success message stating that WordPress is connected to your database, and you can proceed with the installation.</p>
-                                            <img src="../asset/img/wordpress/runtheinstall.jpg " alt=" ">
-                                            <p class="text-info ">Go ahead and click on the ‘Run the installation’ button to continue.</p>
-                                        </li>
-                                        <li>
-                                            <p>Then, It will take you to the welcome screen for WordPress. You need to add a title for your new WordPress website, choose an admin username, enter a strong password, and provide an admin email address.</p>
-                                            <img src="../asset/img/wordpress/welcomewp.jpg " alt=" ">
-                                            <p class="text-info ">Once you’re ready, click on the ‘Install WordPress’ button.</p>
-                                        </li>
-                                        <li>
-                                            <p>After the installation process is complete, you’ll see a success message. In the background, WordPress has created new tables in your database and it’s ready to use.</p>
-                                            <img src="../asset/img/wordpress/loginbutton.jpg " alt=" ">
-                                            <p class="text-info ">You can then proceed to your WordPress dashboard by clicking on the ‘Log In’ button.</p>
-                                        </li>
-                                    </ol>
-                                    <h5 class="text-capitalize text-success ">Congratulations, you have successfully installed WordPress on a Windows computer using WAMP/XAMP.</h3>
-
-
-                                <h3 class="font-weight-bold mt-4 ">Reference</h5>
-                                    <hr>
-                                    <ul>
-                                        <li><a href="https://www.shaileshjha.com/how-to-install-wamp-server-on-windows-10/ " target="_blank " rel="noopener noreferrer ">Installing WAMP in Windows</a> </li>
-                                        <li><a href="https://blog.templatetoaster.com/install-xampp-on-windows/ " target="_blank " rel="noopener noreferrer ">Installing XAMP in Windows</a> </li>
-                                        <li><a href=" https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu " target="_blank " rel="noopener noreferrer ">Installing XAMP in Ubuntu</a> </li>
-                                        <li><a href=" https://www.intelliwolf.com/how-to-install-xampp-step-by-step/ " target="_blank " rel="noopener noreferrer ">Installing XAMP in Mac</a> </li>
-                                        </li>
-                                        <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack " target="_blank " rel="noopener noreferrer ">Installing Wordpress in Ubuntu Step by Step</a> </li>
-                                        </li>
-                                        <li><a href="https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview " target="_blank " rel="noopener noreferrer ">install-and-configure-wordpress in Ubuntu</a> </li>
-                                        </li>
-                                        <li><a href="https://www.wpbeginner.com/wp-tutorials/how-to-install-wordpress-locally-on-mac-using-mamp/ " target="_blank " rel="noopener noreferrer ">how-to-install-wordpress-locally-on-mac-using-mamp</a> </li>
-                                        </li>
-
-                                    </ul>
-                        </div>
-                    </div>
+                             <h3 class="font-weight-bold mt-4 ">Step #5: Displaying the Customized Contact Form </h3>
+                             <p>The <span class="font-weight-bold ">get_option() </span> is used to get value from the option.php which is from our database.</p>
+                             <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p24.png " alt=" ">
+                               <p class="mt-3 ">
+                                 After changing the background color, font type, Button color, Button text color,our contact form will look like:
+                               </p>
+                               <h4>The menu setting</h4>
+                               <img class="dashbord mt-3 " src="../asset/img/PluginDevo/p15.png " alt=" ">
+                               <h4 class="mt-3">The Customized Contact form</h4>
+                               <img style="width: 50%;" class="dashbord mt-3 " src="../asset/img/PluginDevo/p16.png " alt=" ">
+                                <p class="font-weight-bold mt-3 ">The Full Source Code(<span class="font-italic text-info ">Check Version II</span> ) : <a href="https://github.com/meronmesay/Plugin-development-demo.git " target="_blank ">Custom WordPress Plugin</a> </p>
+                            </div>
                 </div>
-
-
             </div>
-        </main>
-        <!-- page-content" -->
+    </div>
+    </main>
+    <!-- page-content" -->
                             </div>
                             <!-- page-wrapper -->
 
